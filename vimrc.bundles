@@ -21,8 +21,9 @@ endif
 " Status line
 "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 "Bundle 'Lokaltog/powerline'
-source /usr/local/Cellar/git/1.7.9/lib/Python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-""python from powerline.bindings.vim import powerline; powerline()
+"source /usr/local/Cellar/git/1.7.9/lib/Python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+python from powerline.vim import setup as powerline_setup; powerline_setup()
+python del powerline_setup
 
 " General
 Bundle 'scrooloose/nerdtree'
@@ -202,6 +203,7 @@ Bundle 'nsf/gocode'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'myhere/vim-nodejs-complete'
 Bundle 'guileen/vim-node'
+Bundle 'aaronj1335/underscore-templates.vim'
 
 " Tabularize
 Bundle 'godlygeek/tabular'
