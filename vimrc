@@ -19,7 +19,14 @@ source ~/.vimrc.bundles
 set background=dark
 colorscheme jellybeans
 if has("gui_gtk2")
-  set guifont=Envy\ Code\ R\ for\ Powerline\ 12
+  set guifont=Droid\ Sans\ Mono\ 6.5
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+
+  " Friendly copy/paste shortcuts
+  nmap <C-V> "+gP
+  imap <C-V> <ESC><C-V>a
+  vmap <C-C> "+y
 else
   set guifont=Envy\ Code\ R\ for\ Powerline:h13
 endif
@@ -154,6 +161,7 @@ autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
 
 " Bundle filetype
 autocmd BufNewFile,BufReadPost *.bundle set filetype=vim
+autocmd BufNewFile,BufReadPost *.hbs set filetype=html
 
 
 " Key Mappings
