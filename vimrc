@@ -27,7 +27,8 @@ if has("gui_gtk2")
   imap <C-V> <ESC><C-V>a
   vmap <C-C> "+y
 else
-  set guifont=Envy\ Code\ R\ for\ Powerline:h13
+  "set guifont=Envy\ Code\ R\ for\ Powerline:h13
+  set guifont=Pragmata\ TT\ for\ Powerline:h13
 endif
 if has("gui_macvim")
   set transparency=10
